@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Existing styles */
+
+.subcategory {
+    display: none;
+    margin-left: 20px; /* Indent subcategories */
+}
+
+.subcategory.collapsed {
+    display: block;
+}
+
+.subcategory .post {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.subcategory .post:last-child {
+    border-bottom: none;
+}
+
+.subcategory .post h3 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.subcategory .post-meta {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.subcategory .post-meta .author::after {
+    content: " | ";
+}
+
+.subcategory .post-meta .date {
+    font-weight: bold;
+}
+
+.subcategory .excerpt {
+    line-height: 1.6;
+}
+
+.subcategory .post img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <!-- Sidebar content goes here -->
+        <ul>
+            <li>
+                <a href="#" onclick="toggleSubcategory('gadgets')">Gadgets</a>
+                <ul class="subcategory" id="gadgets">
+                    <li>
+                        <div class="post">
+                            <img src="smartphns.jpg" alt="Smartphone Trends">
+                            <img src="smart phns 1.jpg" alt="">
+                            <h3>Smartphone Trends 2024</h3>
+                            <div class="post-meta">
+                                <span class="author">TechGuru</span>
+                                <span class="date">March 5, 2024</span>
+                            </div>
+                            <p class="excerpt">Discover the latest smartphone trends for 2024 and what to expect from upcoming releases.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="post">
+                            <img src="wearable devices.jpg" alt="Top Wearable Devices">
+                            <img src="top wearable devices 2.jpg" alt="">
+                            <h3>Top Wearable Devices</h3>
+                            <div class="post-meta">
+                                <span class="author">GadgetMaster</span>
+                                <span class="date">March 8, 2024</span>
+                            </div>
+                            <p class="excerpt">Explore the top wearable devices of the year and their features that are revolutionizing the tech industry.</p>
+                        </div>
+                    </li>
+                    <!-- Add more posts here -->
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <script >
+        // Function to toggle visibility of subcategories
+function toggleSubcategory(subcategory) {
+    const subcategoryElement = document.getElementById(subcategory);
+    subcategoryElement.classList.toggle('collapsed');
+}
+
+    </script>
+</body>
+</html>
